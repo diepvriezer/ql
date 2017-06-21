@@ -51,9 +51,12 @@
     <Compile Include="Languages\QLang\AstBuilder.cs" />
     <Compile Include="Languages\QLang\AstBuilderVisitor.cs" />
     <Compile Include="Languages\QLang\Ast\AstNode.cs" />
-    <Compile Include="Languages\QLang\Ast\ComputedQuestion.cs" />
+    <Compile Include="Languages\QLang\Ast\DefaultVisitor.cs" />
+    <Compile Include="Languages\QLang\Ast\IFormVisitor.cs" />
+    <Compile Include="Languages\QLang\Ast\Statements\ComputedQuestion.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\Add.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\Binary.cs" />
+    <Compile Include="Languages\QLang\Ast\Expressions\IExpressionVisitor.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\LogicalAnd.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\Divide.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\Equal.cs" />
@@ -73,22 +76,31 @@
     <Compile Include="Languages\QLang\Ast\Expressions\QuestionReference.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\Subtract.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\Unary.cs" />
-    <Compile Include="Languages\QLang\Ast\IfStatement.cs" />
+    <Compile Include="Languages\QLang\Ast\Statements\IfThenElse.cs" />
     <Compile Include="Languages\QLang\Ast\Expressions\Expression.cs" />
     <Compile Include="Languages\QLang\Ast\Form.cs" />
-    <Compile Include="Languages\QLang\Ast\Block.cs" />
-    <Compile Include="Languages\QLang\Ast\Question.cs" />
-    <Compile Include="Languages\QLang\Ast\Statement.cs" />
+    <Compile Include="Languages\QLang\Ast\Statements\Block.cs" />
+    <Compile Include="Languages\QLang\Ast\Statements\IStatementVisitor.cs" />
+    <Compile Include="Languages\QLang\Ast\Statements\Question.cs" />
+    <Compile Include="Languages\QLang\Ast\Statements\Statement.cs" />
     <Compile Include="Languages\QLang\Ast\Types\BoolType.cs" />
+    <Compile Include="Languages\QLang\Ast\Types\ITypeVisitor.cs" />
     <Compile Include="Languages\QLang\Ast\Types\NumType.cs" />
     <Compile Include="Languages\QLang\Ast\Types\StringType.cs" />
     <Compile Include="Languages\QLang\Ast\Types\BaseType.cs" />
+    <Compile Include="Traversals\ITraversal.cs" />
+    <Compile Include="Traversals\PrintSource.cs" />
+    <Compile Include="Traversals\QuestionInventory.cs" />
+    <Compile Include="Traversals\QuestionInventoryResult.cs" />
     <None Include="obj\Debug\QLBaseVisitor.cs" />
     <None Include="obj\Debug\QLLexer.cs" />
     <None Include="obj\Debug\QLParser.cs" />
     <None Include="obj\Debug\QLVisitor.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <None Include="Tests\valid.ql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

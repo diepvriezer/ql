@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using QL.Languages.QLang.Ast.Statements;
 
 namespace QL.Languages.QLang.Ast
 {
@@ -10,5 +6,10 @@ namespace QL.Languages.QLang.Ast
     {
         public string Name { get; set; }
         public Statement Statement { get; set; }
+
+        public virtual T Accept<T>(IFormVisitor<T> visitor)
+        {
+            return visitor.Visit(this);
+        }
     }
 }

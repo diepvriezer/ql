@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 using Antlr4.Runtime.Misc;
 using QL.Languages.QLang.Ast.Types;
 using QL.Languages.QLang.Ast.Expressions;
+using QL.Languages.QLang.Ast.Statements;
 
 namespace QL.Languages.QLang
 {
@@ -66,7 +67,7 @@ namespace QL.Languages.QLang
             var ifs = context
                 .conditionBlock()
                 .Select(child => child.Accept(this))
-                .Cast<IfStatement>()
+                .Cast<IfThenElse>()
                 .ToList();
 
             var root = ifs.First();
@@ -86,7 +87,7 @@ namespace QL.Languages.QLang
 
         public override AstNode VisitConditionBlock([NotNull] QLParser.ConditionBlockContext context)
         {
-            var ifStatement = new IfStatement
+            var ifStatement = new IfThenElse()
             {
                 Condition = context.expr().Accept(this) as Expression,
                 Then = context.statement().Accept(this) as Statement
@@ -170,6 +171,11 @@ namespace QL.Languages.QLang
             {
                 Value = context.TRUE() != null
             };
+        }
+
+        public override AstNode VisitParens([NotNull] QLParser.ParensContext context)
+        {
+            return context.expr().Accept(this);
         }
 
         #endregion

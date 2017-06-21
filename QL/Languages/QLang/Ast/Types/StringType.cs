@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace QL.Languages.QLang.Ast.Types
+﻿namespace QL.Languages.QLang.Ast.Types
 {
     public class StringType : BaseType
     {
+        public override T Accept<T>(ITypeVisitor<T> visitor)
+        {
+            return visitor.Visit(this);
+        }
     }
 }

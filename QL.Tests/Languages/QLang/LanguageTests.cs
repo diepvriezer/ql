@@ -6,11 +6,12 @@ using QL.Languages.QLang;
 using QL.Languages.QLang.Ast;
 using QL.Languages.QLang.Ast.Types;
 using QL.Languages.QLang.Ast.Expressions;
+using QL.Languages.QLang.Ast.Statements;
 
 namespace QL.Tests.Languages.QLang
 {
     [TestClass]
-    public class LanguageTests
+    public class LanguageTests : TestBase
     {
         [TestMethod]
         public void ParsesQuestions()
@@ -76,21 +77,6 @@ namespace QL.Tests.Languages.QLang
             expr = BuildExpr(@"!a+b");
             Assert.IsInstanceOfType(expr as Expression, typeof(Add));
             Assert.IsInstanceOfType(expr.Left as Expression, typeof(Not));
-        }
-
-
-        private Form Build(string source)
-        {
-            var builder = new AstBuilder();
-            return builder.BuildFromString(source) as Form;
-        }
-
-        private Expression BuildExpr(string expr)
-        {
-            var source = @"form TestForm if " + expr + @" q1: ""test"" bool";
-            var builder = new AstBuilder();
-            dynamic result = builder.BuildFromString(source) as Form;
-            return (result.Statement.Condition) as Expression;
         }
     }
 }
