@@ -16,11 +16,10 @@ namespace QL.Traversals
 
             foreach (var group in _result.DuplicateIds)
             {
-                var dupeList = string.Join(", ", group.Select(q => q.Id));
-                Console.WriteLine($"WARN\tDuplicate questions by ID for {dupeList}");
-                if (group.Select(q => q.Text).Distinct().Count() > 1)
+                Console.WriteLine($"WARN\tDuplicate questions ({group.Count()} for ID {group.Key}");
+                if (group.Select(q => q.Type).Distinct().Count() > 1)
                 {
-                    Console.WriteLine("ABRT\tQuestions do not share label");
+                    Console.WriteLine("ABRT\tThese questions do not share the same type!");
                     contd = false;
                 }
             }

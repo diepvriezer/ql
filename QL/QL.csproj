@@ -92,6 +92,7 @@
     <Compile Include="Traversals\PrintSource.cs" />
     <Compile Include="Traversals\QuestionInventory.cs" />
     <Compile Include="Traversals\QuestionInventoryResult.cs" />
+    <Compile Include="Traversals\TypeChecker.cs" />
     <None Include="obj\Debug\QLBaseVisitor.cs" />
     <None Include="obj\Debug\QLLexer.cs" />
     <None Include="obj\Debug\QLParser.cs" />

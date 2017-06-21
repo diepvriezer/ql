@@ -39,11 +39,15 @@ namespace QL
 
             // Validate and check.
             var questionTrav = new QuestionInventory();
-            questionTrav.Visit(tree);
+            var questionTravResult = questionTrav.Visit(tree);
             if (!questionTrav.Continue())
                 return;
 
-
+            // Perform type checking, use previously determined questions to type mapping.
+            var typeCheck = new TypeChecker(questionTravResult.QuestionsWithTypes);
+            typeCheck.Visit(tree);
+            if (!typeCheck.Continue())
+                return;
         }
     }
 }
