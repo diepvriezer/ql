@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="NameAndType">
+  <Class Name="QL.Languages.QLang.Ast.AstNode" Collapsed="true">
+    <Position X="56.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\AstNode.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Block" Collapsed="true">
+    <Position X="29.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Block.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.ComputedQuestion" Collapsed="true">
+    <Position X="34" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\ComputedQuestion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Form" Collapsed="true">
+    <Position X="36.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Form.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.IfStatement" Collapsed="true">
+    <Position X="31.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAACAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\IfStatement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Question" Collapsed="true">
+    <Position X="34" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAACAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Question.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Statement" Collapsed="true">
+    <Position X="31.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Statement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Add" Collapsed="true">
+    <Position X="40.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Add.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Binary" Collapsed="true">
+    <Position X="51" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Binary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Divide" Collapsed="true">
+    <Position X="52" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Divide.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Equal" Collapsed="true">
+    <Position X="61" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Equal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Expression" Collapsed="true">
+    <Position X="57.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Expression.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.GreaterThan" Collapsed="true">
+    <Position X="38.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\GreaterThan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.GreaterThanOrEqual" Collapsed="true">
+    <Position X="43" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\GreaterThanOrEqual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.LessThan" Collapsed="true">
+    <Position X="47.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\LessThan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.LessThanOrEqual" Collapsed="true">
+    <Position X="54.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\LessThanOrEqual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Literal" Collapsed="true">
+    <Position X="70" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Literal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.LiteralBool" Collapsed="true">
+    <Position X="72.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\LiteralBool.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.LiteralNum" Collapsed="true">
+    <Position X="67.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\LiteralNum.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.LiteralString" Collapsed="true">
+    <Position X="70" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\LiteralString.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.LogicalAnd" Collapsed="true">
+    <Position X="49.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\LogicalAnd.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.LogicalOr" Collapsed="true">
+    <Position X="56.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\LogicalOr.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Minus" Collapsed="true">
+    <Position X="76.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Minus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Multiply" Collapsed="true">
+    <Position X="63.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Multiply.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Not" Collapsed="true">
+    <Position X="74.5" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Not.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.NotEqual" Collapsed="true">
+    <Position X="45.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\NotEqual.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.QuestionReference" Collapsed="true">
+    <Position X="65.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\QuestionReference.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Subtract" Collapsed="true">
+    <Position X="58.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Subtract.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Expressions.Unary" Collapsed="true">
+    <Position X="75.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Expressions\Unary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Types.BaseType" Collapsed="true">
+    <Position X="81.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Types\BaseType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Types.BoolType" Collapsed="true">
+    <Position X="79" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Types\BoolType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Types.NumType" Collapsed="true">
+    <Position X="81.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Types\NumType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QL.Languages.QLang.Ast.Types.StringType" Collapsed="true">
+    <Position X="83.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Languages\QLang\Ast\Types\StringType.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
