@@ -175,7 +175,9 @@ namespace QL.Traversals
         {
             var t0 = types[0];
             var t1 = types[1];
-            if (!t0.Equals(t1))
+            var u = t0.GetType();
+            var v = t1.GetType(); // :(
+            if (!(u.IsAssignableFrom(v) || v.IsAssignableFrom(u)))
             {
                 Console.WriteLine($"ABRT\tResolved top type(s) {PrintType(t0)} and {PrintType(t1)} are not compatible in {_lastExpr}");
                 _contd = false;

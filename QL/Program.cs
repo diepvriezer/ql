@@ -56,12 +56,14 @@ namespace QL
             if (!typeCheck.Continue())
                 return;
 
-            // Build list of questions.
+            // Build evaluator with list of tree to UI bindings. Use default factory.
             var widgetFactory = new WidgetFactory();
             var bindings = new CreateBindings(widgetFactory).Visit(tree);
             var evaluator = new Evaluator(bindings, questionResults.ComputedQuestions.ToList());
+            Action refresh = () => evaluator.Visit(tree);
 
-            var window = new QuestionaireContainer(tree.Name, bindings, () => evaluator.Visit(tree));
+            // Open window and run!
+            var window = new QuestionaireContainer(tree.Name, bindings, refresh);
             Application.Run(window);
         }
     }

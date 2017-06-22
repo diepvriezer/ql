@@ -16,4 +16,12 @@
             testCheckDoesntPass: "Doesn't pass" bool(testCheck)
         }
     }
+
+    testCheck: "Test for more!" bool
+    
+    sayMyName: "Type a letter (a or b)!" string
+    if (sayMyName == "a" || sayMyName == "b") {
+        loook: "Letter" string(sayMyName)
+        forWhatItsWorth: "Take this decimal" num(5000)
+    }
 }

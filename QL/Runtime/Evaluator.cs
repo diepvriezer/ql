@@ -36,7 +36,7 @@ namespace QL.Runtime
             var result = node.Condition.Accept(this);
 
             // Update values but hide them if we're in some other else block.
-            if (!HideFutureQuestions)
+            if (HideFutureQuestions)
             {
                 node.Then.Accept(this);
                 if (node.Else != null)
@@ -72,7 +72,7 @@ namespace QL.Runtime
         public override Value Visit(Question node)
         {
             // Check if hiding.
-            Lookup[node.Id].Visible = !HideFutureQuestions;
+            QuestionLookup[node.Id].Visible = !HideFutureQuestions;
             return new UndefinedValue();
         }
 
@@ -118,8 +118,8 @@ namespace QL.Runtime
         public override Value Visit(Multiply node) => Calculation(node, (x, y) => x * y);
 
         // Comparisions.
-        public override Value Visit(Equal node) => Comparision(node, (x, y) => x == y);
-        public override Value Visit(NotEqual node) => Comparision(node, (x, y) => x != y);
+        public override Value Visit(Equal node) => Comparision(node, (x, y) => x.Equals(y));
+        public override Value Visit(NotEqual node) => Comparision(node, (x, y) => !x.Equals(y));
         public override Value Visit(GreaterThan node) => Comparision(node, (x, y) => x.CompareTo(y) > 0);
         public override Value Visit(GreaterThanOrEqual node) => Comparision(node, (x, y) => x.CompareTo(y) >= 0);
         public override Value Visit(LessThan node) => Comparision(node, (x, y) => x.CompareTo(y) < 0);

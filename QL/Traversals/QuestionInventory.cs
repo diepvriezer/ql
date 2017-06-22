@@ -17,10 +17,16 @@ namespace QL.Traversals
             foreach (var group in _result.DuplicateIds)
             {
                 Console.WriteLine($"WARN\tDuplicate questions ({group.Count()} for ID {group.Key}");
-                if (group.Select(q => q.Type).Distinct().Count() > 1)
+                var types = group.Select(q => q.Type.GetType()).ToList();
+                var t = types[0];
+                foreach(var u in types.Skip(1))
                 {
-                    Console.WriteLine("ABRT\tThese questions do not share the same type!");
-                    contd = false;
+                    if (!(t.IsAssignableFrom(u) || u.IsAssignableFrom(t)))
+                    {
+                        Console.WriteLine("ABRT\tThese questions do not share the same type!");
+                        contd = false;
+                        break;
+                    }
                 }
             }
 

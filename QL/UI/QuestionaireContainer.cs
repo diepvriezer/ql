@@ -15,6 +15,8 @@ namespace QL.UI
 
             titleLabel.Text = $"QL form for {formName}";
             InitializeBindings();
+            EvaluatorCallback();
+            EvaluatorCallback();
         }
 
         protected readonly IList<UIBinding> Bindings;
@@ -32,11 +34,6 @@ namespace QL.UI
             }
         }
         
-        private void QuestionaireContainer_Load(object sender, EventArgs e)
-        {
-            EvaluatorCallback();
-        }
-        
         private void doneButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -45,6 +42,10 @@ namespace QL.UI
         private void QuestionaireContainer_DoubleClick(object sender, EventArgs e)
         {
             EvaluatorCallback();
+            foreach(var b in Bindings)
+            {
+                b.Visible = true;
+            }
         }
     }
 }

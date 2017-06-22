@@ -90,7 +90,6 @@
             this.MaximizeBox = false;
             this.Name = "QuestionaireContainer";
             this.Text = "QL Questionaire";
-            this.Load += new System.EventHandler(this.QuestionaireContainer_Load);
             this.DoubleClick += new System.EventHandler(this.QuestionaireContainer_DoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
