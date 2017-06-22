@@ -11,6 +11,16 @@ namespace QL.Traversals
         public IList<Question> Questions { get; } = new List<Question>();
         public IList<QuestionReference> References { get; } = new List<QuestionReference>();
 
+        public IEnumerable<ComputedQuestion> ComputedQuestions
+        {
+            get { return Questions.OfType<ComputedQuestion>(); }
+        }
+
+        public IEnumerable<Question> PureQuestions
+        {
+            get { return Questions.Except(ComputedQuestions); }
+        }
+
         public IEnumerable<IGrouping<string, Question>> DuplicateIds
         {
             get { return Questions.GroupBy(q => q.Id).Where(g => g.Count() > 1); }

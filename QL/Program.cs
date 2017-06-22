@@ -1,18 +1,25 @@
 ﻿using QL.Languages.QLang;
+using QL.Runtime;
 using QL.Traversals;
+using QL.UI;
+using QL.UI.Widgets;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace QL
 {
     class Program
     {
+        [STAThread]
         static void Main(string[] args)
         {
+            Application.EnableVisualStyles();
+
             var path = "Tests/valid.ql";
             if (args.Length > 0)
             {
@@ -39,15 +46,24 @@ namespace QL
 
             // Validate and check.
             var questionTrav = new QuestionInventory();
-            var questionTravResult = questionTrav.Visit(tree);
+            var questionResults = questionTrav.Visit(tree);
             if (!questionTrav.Continue())
                 return;
 
             // Perform type checking, use previously determined questions to type mapping.
-            var typeCheck = new TypeChecker(questionTravResult.QuestionsWithTypes);
+            var typeCheck = new TypeChecker(questionResults.QuestionsWithTypes);
             typeCheck.Visit(tree);
             if (!typeCheck.Continue())
                 return;
+
+            // Build list of questions.
+            var widgetFactory = new WidgetFactory();
+            var bindings = new CreateBindings(widgetFactory).Visit(tree);
+
+
+
+            var window = new QuestionaireContainer(tree.Name, bindings);
+            Application.Run(window);
         }
     }
 }

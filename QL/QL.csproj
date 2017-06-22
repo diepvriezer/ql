@@ -40,6 +40,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Runtime\BoolValue.cs" />
     <Compile Include="Languages\QLang\AstBuilder.cs" />
     <Compile Include="Languages\QLang\AstBuilderVisitor.cs" />
     <Compile Include="Languages\QLang\Ast\AstNode.cs" />
@@ -88,11 +91,37 @@
     <Compile Include="Languages\QLang\Ast\Types\NumType.cs" />
     <Compile Include="Languages\QLang\Ast\Types\StringType.cs" />
     <Compile Include="Languages\QLang\Ast\Types\BaseType.cs" />
-    <Compile Include="Traversals\ITraversal.cs" />
+    <Compile Include="Runtime\NumValue.cs" />
+    <Compile Include="Runtime\StringValue.cs" />
+    <Compile Include="UI\UIBinding.cs" />
+    <Compile Include="Runtime\UndefinedValue.cs" />
+    <Compile Include="Runtime\Value.cs" />
+    <Compile Include="UI\CreateBindings.cs" />
+    <Compile Include="Traversals\IBlockTraversal.cs" />
     <Compile Include="Traversals\PrintSource.cs" />
     <Compile Include="Traversals\QuestionInventory.cs" />
     <Compile Include="Traversals\QuestionInventoryResult.cs" />
     <Compile Include="Traversals\TypeChecker.cs" />
+    <Compile Include="UI\Widgets\IWidget.cs" />
+    <Compile Include="UI\QuestionaireContainer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\QuestionaireContainer.Designer.cs">
+      <DependentUpon>QuestionaireContainer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Widgets\WidgetFactory.cs" />
+    <Compile Include="UI\Widgets\CheckBoxWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Widgets\StyledLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Widgets\TextFieldWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\Widgets\UpDownWidget.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <None Include="obj\Debug\QLBaseVisitor.cs" />
     <None Include="obj\Debug\QLLexer.cs" />
     <None Include="obj\Debug\QLParser.cs" />
@@ -115,6 +144,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="UI\QuestionaireContainer.resx">
+      <DependentUpon>QuestionaireContainer.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
