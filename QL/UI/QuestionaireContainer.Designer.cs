@@ -58,7 +58,7 @@
             this.tableLayout.Name = "tableLayout";
             this.tableLayout.RowCount = 1;
             this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayout.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 150F));
             this.tableLayout.Size = new System.Drawing.Size(250, 150);
             this.tableLayout.TabIndex = 1;
             // 
@@ -91,6 +91,7 @@
             this.Name = "QuestionaireContainer";
             this.Text = "QL Questionaire";
             this.Load += new System.EventHandler(this.QuestionaireContainer_Load);
+            this.DoubleClick += new System.EventHandler(this.QuestionaireContainer_DoubleClick);
             this.ResumeLayout(false);
             this.PerformLayout();
 

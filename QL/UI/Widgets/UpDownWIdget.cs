@@ -9,9 +9,13 @@ namespace QL.UI.Widgets
         public UpDownWidget()
         {
             DecimalPlaces = 2;
+            Minimum = -10E6M;
+            Maximum = 10E6M;
+            ValueChanged += (o, e) => UpdateCallback();
         }
 
         public bool CanReceiveValue { get => ReadOnly; set => ReadOnly = value; }
+        public Action UpdateCallback { get; set; }
 
         public Value GetValue()
         {

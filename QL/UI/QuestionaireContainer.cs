@@ -1,28 +1,24 @@
-﻿using QL.UI.Widgets;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QL.UI
 {
     public partial class QuestionaireContainer : Form
     {
-        public QuestionaireContainer(string formName, IList<UIBinding> bindings)
+        public QuestionaireContainer(string formName, IList<UIBinding> bindings, Action evaluatorCallback)
         {
             InitializeComponent();
 
+            EvaluatorCallback = evaluatorCallback;
+            Bindings = bindings;          
+
             titleLabel.Text = $"QL form for {formName}";
-            Bindings = bindings;
             InitializeBindings();
         }
 
         protected readonly IList<UIBinding> Bindings;
+        protected readonly Action EvaluatorCallback;
 
         private void InitializeBindings()
         {
@@ -30,18 +26,25 @@ namespace QL.UI
             for (int i=0; i<Bindings.Count; i++)
             {
                 var binding = Bindings[i];
+                binding.Control.UpdateCallback = EvaluatorCallback;
                 tableLayout.Controls.Add(binding.Label, 0, i);
                 tableLayout.Controls.Add((Control)binding.Control, 1, i);
             }
         }
-
+        
         private void QuestionaireContainer_Load(object sender, EventArgs e)
         {
+            EvaluatorCallback();
         }
         
         private void doneButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void QuestionaireContainer_DoubleClick(object sender, EventArgs e)
+        {
+            EvaluatorCallback();
         }
     }
 }

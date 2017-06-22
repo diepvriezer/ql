@@ -91,6 +91,7 @@
     <Compile Include="Languages\QLang\Ast\Types\NumType.cs" />
     <Compile Include="Languages\QLang\Ast\Types\StringType.cs" />
     <Compile Include="Languages\QLang\Ast\Types\BaseType.cs" />
+    <Compile Include="Runtime\Evaluator.cs" />
     <Compile Include="Runtime\NumValue.cs" />
     <Compile Include="Runtime\StringValue.cs" />
     <Compile Include="UI\UIBinding.cs" />

@@ -59,10 +59,9 @@ namespace QL
             // Build list of questions.
             var widgetFactory = new WidgetFactory();
             var bindings = new CreateBindings(widgetFactory).Visit(tree);
+            var evaluator = new Evaluator(bindings, questionResults.ComputedQuestions.ToList());
 
-
-
-            var window = new QuestionaireContainer(tree.Name, bindings);
+            var window = new QuestionaireContainer(tree.Name, bindings, () => evaluator.Visit(tree));
             Application.Run(window);
         }
     }

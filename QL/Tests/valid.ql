@@ -7,6 +7,13 @@
         sellingPrice: "Price the house was sold for:" num
         privateDebt: "Private debts for the sold house:" num
         valueResidue: "Value residue:" num(sellingPrice - privateDebt)
-    } else if (hasBoughtHouse)
+    } else if (hasBoughtHouse) {
         buyPrice: "Price the house was bought for:" num
+        testCheck: "Test for more!" bool
+        if (testCheck) {
+            testCheckPass: "Passes" bool(testCheck)
+        } else {
+            testCheckDoesntPass: "Doesn't pass" bool(testCheck)
+        }
+    }
 }
